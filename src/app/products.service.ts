@@ -18,10 +18,19 @@ export class ProductsService {
     return this.http.get<Product[]>(this.productsServiceURI);
   }
 
-  getItem(naam : string): Observable<Product[]>{
+  getItem(naam: string): Observable<Product[]> {
     return this.http.get<Product[]>(`${this.productsServiceURI}/${naam}`);
   }
 
+  addItem(product: Product): void {
+    this.http.post(this.productsServiceURI + "/add", product).subscribe();
+  }
+
+  deleteProduct(naam: string): void {
+    let url = this.productsServiceURI + "/" + naam;
+    this.http.delete(url,
+      { headers: this.contentHeaders }).subscribe();
+  }
   // getAllItems() : Promise<string>{
   //   return fetch(this.productsServiceURI).then(response => response.json())
   // }

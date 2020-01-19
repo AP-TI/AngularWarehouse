@@ -8,7 +8,7 @@ export class Product {
 
    getParams(): HttpParams {
       return new HttpParams()
-         .set('name', this.naam)
+         .set('naam', this.naam)
          .set('prijs', this.prijs)
          .set('aantal', this.aantal);
    }

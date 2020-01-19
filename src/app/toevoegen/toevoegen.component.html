@@ -1,1 +1,7 @@
 <p>toevoegen works!</p>
+<form [formGroup]="productToevoegenForm" (ngSubmit)="onSubmit()">
+    <input type="text" placeholder="Naam" formControlName="naam" >
+    <input type="text" placeholder="Aantal" formControlName="aantal" >
+    <input type="text" placeholder="Prijs" formControlName="prijs" >
+    <button type="submit" [disabled]="!productToevoegenForm.valid">Voeg toe!</button>
+</form>
