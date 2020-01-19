@@ -1,0 +1,16 @@
+<p>lijst works!</p>
+<table>
+    <tbody>
+        <tr>
+            <th>Naam</th>
+            <th>Aantal</th>
+            <th>Prijs</th>
+        </tr>
+        <tr *ngFor="let product of producten">
+            <td>{{product.naam}}</td>
+            <td>{{product.aantal}}</td>
+            <td>{{product.prijs}}</td>
+        </tr>
+
+    </tbody>
+</table>
