@@ -19,11 +19,10 @@ export class ToevoegenComponent {
     private ps: ProductsService) { }
 
   onSubmit() {
-    this.ps.addItem(new Product(this.productToevoegenForm.value.naam, this.productToevoegenForm.value.aantal, this.productToevoegenForm.value.prijs));
+    //this.ps.addItem(new Product(this.productToevoegenForm.value.naam, this.productToevoegenForm.value.aantal, this.productToevoegenForm.value.prijs));
 
     //De simpele manier:
-    // let x:Product = this.productToevoegenForm.value;
-    // this.ps.addItem(x);
+    let x:Product = this.productToevoegenForm.value;
+    this.ps.addItem(x);
   }
-
 }
